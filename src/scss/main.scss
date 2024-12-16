@@ -1,43 +1,41 @@
+@import "bootstrap/scss/bootstrap-grid";
+
+.row + .row {
+  margin-top: 16px;
+}
+
+.row > .col,
+.row > [class^="col-"] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  /*background-color: rgba(191, 0, 255, 0.356);
+  border: 1px solid rgba(0, 255, 179, 0.2);*/
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-a {
-  color: inherit;
-}
-
-img,
-video {
-  display: block;
-}
-
-/* General */
+html,
 body {
-  margin: 0;
+  height: 100%;
+}
+
+body {
   font-family: "Arial", sans-serif;
   color: #fff;
   background: black;
 }
+
 a {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
 }
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
-.logo {
-  text-align: center;
-  width: 100px;
-}
+
 img {
   width: 100%;
-  height: auto;
-  display: block;
 }
 
 /* Header */
@@ -45,21 +43,32 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  position: fixed;
-  width: 100%;
-  background: black;
+  padding: 30px 0;
+  position: absolute;
+  width: calc(100% - 80px);
+  left: 40px;
+  background: transparent;
   z-index: 10;
 }
-header .logo {
-  font-size: 24px;
-  font-weight: bold;
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  text-align: center;
 }
+
+.logo img {
+  width: 50%; /* Resize the logo to 20% of its original size */
+}
+
 .burger-menu {
   display: flex;
   flex-direction: column;
   cursor: pointer;
 }
+
 .burger-menu span {
   width: 25px;
   height: 3px;
@@ -67,72 +76,101 @@ header .logo {
   margin: 4px 0;
 }
 
-/* Dropdown Menu */
 .dropdown-menu {
-  position: absolute;
-  top: 70px;
-  right: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: black;
-  padding: 20px;
-  display: none;
-  border-radius: 8px;
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  flex-direction: column;
 }
+
 .dropdown-menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
+
 .dropdown-menu ul li {
-  margin: 10px 0;
+  margin: 20px 0;
 }
+
 .dropdown-menu ul li a {
+  font-size: 2rem; /* Increase font size */
   color: white;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 0.5s;
+}
+
+.dropdown-menu ul li a:hover {
+  background: #444; /* Add hover effect */
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #444; /* Change color on hover */
+}
+
+.right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 /* Hero Section */
 .hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.hero {
   position: relative;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  text-align: center;
-  overflow: hidden;
+  text-align: right;
+  width: 100vw; /* Ensure full width of the viewport */
+  margin-left: -40px; /* Remove left margin */
+  margin-right: -40px; /* Remove right margin */
+  padding: 0; /* Remove padding that might cause overflow */
+  box-sizing: border-box; /* Ensure padding/margins do not cause overflow */
 }
 
 .hero-bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw; /* Ensure background spans the full width */
+  height: 100vh; /* Ensure background spans the full height */
   object-fit: cover;
   z-index: 1;
+  filter: blur(1px); /* Apply blur effect to the background */
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  color: white;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 .hero h1 {
   font-size: 3rem;
-  font-weight: bold;
   margin-bottom: 20px;
 }
 
@@ -140,74 +178,81 @@ header .logo {
   padding: 10px 20px;
   background: white;
   color: black;
-  border-radius: 20px;
+  border-radius: 10px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
-.shop-btn {
-  padding: 10px 20px;
-  background: white;
-  color: black;
-  border-radius: 20px;
-  font-weight: bold;
+.Collection {
+  padding-top: 100px;
 }
 
-/* Latest Collection */
-.latest-collection {
-  padding: 60px 20px;
+.title {
+  text-transform: uppercase;
+}
+.collection {
   text-align: center;
-}
-.latest-collection .products {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.product-card {
-  width: 300px;
-  text-align: center;
-  background: #1e1e1e;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 20px;
-}
-.product-card img {
-  border-radius: 10px;
-}
-.product-card h3 {
-  font-size: 1.5rem;
-  margin: 10px 0;
-}
-.product-card p {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 10px;
-}
-.product-card .read-more {
-  padding: 8px 16px;
-  background: white;
-  color: black;
-  border-radius: 20px;
 }
 
-/* Domain & Philosophy */
-.info {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
-}
-.info-block {
-  width: 300px;
+.seemore {
   text-align: center;
-}
-.info-block img {
-  border-radius: 10px;
-  margin-bottom: 10px;
+  text-transform: capitalize;
+  text-decoration: underline;
+  color: #b1b1b1;
+  padding-bottom: 100px;
 }
 
-/* Footer */
-footer {
-  padding: 20px;
-  background: #1e1e1e;
+.Collection .text {
+  padding-top: 20px;
   text-align: center;
+}
+
+.Domain {
+  padding-top: 100px;
+}
+
+.Domain h1 {
+  padding-bottom: 20px;
+}
+
+.Domain .seemore {
+  padding-top: 20px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.philosophy h1 {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.philosophy .seemore {
+  padding-top: 20px;
+  text-align: right;
+  padding-bottom: 20px;
+}
+
+.philosophy .text {
+  text-align: right;
+}
+
+.Vigneron h1 {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.vigneron {
+  padding-bottom: 20px;
+}
+
+.visitbtn {
+  background: #595959;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  padding: 15px 20px;
+  border-radius: 15px;
 }

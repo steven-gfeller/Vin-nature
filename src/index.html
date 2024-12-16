@@ -7,23 +7,36 @@
     <link rel="stylesheet" href="scss/main.scss" />
   </head>
   <body>
-    <header>
-      <div class="menu">
-        <div class="burger-menu" id="burgerMenu">
-          <span></span>
-          <span></span>
-          <span></span>
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <div class="menu">
+              <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2 offset-3">
+            <div class="logo">
+              <img src="img/logo.svg" alt="Logo" />
+            </div>
+          </div>
+          <div class="col-2 offset-3">
+            <div class="right">
+              <div>EN</div>
+              <div>Cart</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="logo"><img src="img/logo.svg" alt="" /></div>
-      <div class="right">
-        <div>EN</div>
-        <div>Cart</div>
-      </div>
-    </header>
-
-    <!-- Burger Dropdown Menu -->
+    </div>
     <nav class="dropdown-menu" id="dropdownMenu">
+      <button class="close-btn" id="closeBtn">X</button>
+
       <ul>
         <li><a href="#">Domain</a></li>
         <li><a href="#">Philosophy</a></li>
@@ -31,66 +44,136 @@
         <li><a href="#">New Arrivals</a></li>
       </ul>
     </nav>
-
-    <!-- Hero Section -->
     <section class="hero">
-      <img src="img/Banner full.png" alt="Hero Background" class="hero-bg" />
-      <div class="hero-content">
-        <h1>Rediscover Your Primal Instincts</h1>
-        <a href="#" class="shop-btn">Shop</a>
-      </div>
-    </section>
-
-    <!-- Latest Collection -->
-    <section class="latest-collection">
-      <div class="title">
-        <h2>Latest Collection</h2>
-      </div>
-      <div class="products">
-        <div class="product-card">
-          <img src="img/1.jpg" alt="Douce Violence" />
-          <h3>Douce Violence</h3>
-          <p>
-            Introducing Douce Violence, a bold red wine that embodies depth and
-            mystery. With aromas of dark berries, blackcurrant, and a hint of
-            cocoa.
-          </p>
-          <a href="#" class="read-more">Read More</a>
-        </div>
-        <div class="product-card">
-          <img src="img/2.jpg" alt="Kiss of Life" />
-          <h3>Kiss of Life</h3>
-          <p>
-            Introducing Kiss of Life, a bold white wine that embodies elegance
-            and mystery. Experience vibrant layers with every sip.
-          </p>
-          <a href="#" class="read-more">Read More</a>
+      <img src="img/Banner full.png" alt="Banner" class="hero-bg" />
+      <div class="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 offset-5">
+              <div class="hero-content">
+                <h1>Rediscover Your Primal Instincts</h1>
+                <a href="#" class="shop-btn">Shop</a>
+              </div>
+            </div>
+            <div class="col-2 offset-10">Boutton</div>
+          </div>
         </div>
       </div>
     </section>
-
-    <!-- Domain & Philosophy -->
-    <section class="info">
-      <div class="info-block">
-        <img src="img/3.webp" alt="Domain" />
-        <h3>Domain</h3>
-        <a href="#" class="read-more">Read More</a>
+    <div class="Collection">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="title">
+              <h1 class="collection">Latest Collection</h1>
+            </div>
+          </div>
+          <div class="seemore">
+            <div class="col-12"><a href="sell all">See all</a></div>
+          </div>
+          <div class="products">
+            <div class="row">
+              <div class="col-6">
+                <a href="vin-rouge.html"
+                  ><img src="img/1.jpg" alt="Douce Violence" />
+                </a>
+                <p class="text">
+                  Introducing Douce Violence, a bold red wine that embodies
+                  depth and mystery. With aromas of dark berries, blackcurrant,
+                  and a hint of cocoa.
+                </p>
+              </div>
+              <div class="col-6">
+                <img src="img/2.jpg" alt="Kiss of Life" />
+                <p class="text">
+                  Introducing Kiss of Life, a bold white wine that embodies
+                  elegance and mystery. Experience vibrant layers with every
+                  sip.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="info-block">
-        <img src="img/5.webp" alt="Philosophy" />
-        <h3>Philosophy</h3>
-        <a href="#" class="read-more">Read More</a>
+    </div>
+    <div class="Domain">
+      <div class="container">
+        <div class="row">
+          <div class="title">
+            <div class="col-12"><h1>Welcome to Yetu Wines</h1></div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              Yetu Wines combines tradition and innovation to craft exquisite
+              wines that celebrate life’s finest moments. Each bottle embodies
+              our dedication to quality and the art of winemaking. Explore
+              flavors that inspire connection.
+              <div class="seemore">Read more</div>
+              <img src="img/3.webp" alt="" />
+            </div>
+            <div class="col-7 offset-1">
+              <img src="img/4.jpg" alt="domain" />
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <p>Instagram: @yetuVignesofficiel</p>
-        <p>Route de la vigne 96, 4420 Villeverte</p>
-        <p>+41 26 420 69 69</p>
+    </div>
+    <div class="philosophy">
+      <div class="container">
+        <div class="row">
+          <div class="col-12"><h1>Philosophy</h1></div>
+          <div class="col-7"><img src="img/5.webp" alt="" /></div>
+          <div class="col-4 offset-1">
+            <div class="text">
+              Yetu Wines believes in the harmony of nature and craftsmanship to
+              create wines that tell a story of their origins. Each sip reflects
+              our passion for heritage and a commitment to excellence. Savor
+              moments that connect tradition to today.
+            </div>
+            <div class="seemore">Read more</div>
+            <img src="img/3.webp" alt="" />
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
+    <div class="Vigneron">
+      <div class="container">
+        <div class="row">
+          <div class="col-12"><h1>Vigneron</h1></div>
+          <img class="vigneron" src="img/6.jpg" alt="cave" />
+          <div class="col-12">
+            <a href="#" class="visitbtn">Visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Vigneron">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">Instagram</div>
+          <div class="col-12">Instagram nom</div>
+          <div class="col-12">Instagram photos</div>
+        </div>
+      </div>
+    </div>
+    <div class="Footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">Logo</div>
+          <div class="col-2">Adresse</div>
+          <div class="col-2 offset-1">Visites</div>
+          <div class="col-2 offset-1">Join the tribe</div>
+          <div class="col-2 offset-1">Language</div>
+          <div class="col-2">Adresse 2</div>
+          <div class="col-2 offset-1">Visites heures</div>
+          <div class="col-2 offset-1">Fill</div>
+          <div class="col-2 offset-1">Language</div>
+          <div class="col-3">Important</div>
+          <div class="col-3 offset-1">Important</div>
+          <div class="col-3 offset-2">Important</div>
+        </div>
+      </div>
+    </div>
     <script src="js/main.js" type="module"></script>
   </body>
 </html>

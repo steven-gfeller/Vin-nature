@@ -181,6 +181,16 @@ header {
   border-radius: 10px;
   font-weight: bold;
   text-transform: uppercase;
+  transition: color, ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.shop-btn:hover {
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  border-radius: 10px;
+  background: rgb(0, 0, 0);
 }
 
 .Collection {
@@ -200,6 +210,11 @@ header {
   text-decoration: underline;
   color: #b1b1b1;
   padding-bottom: 100px;
+  transition: color 0.5s, width 0.2s;
+}
+
+.seemore:hover {
+  color: white;
 }
 
 .Collection .text {
@@ -250,11 +265,32 @@ header {
 }
 
 .visitbtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
   background: #595959;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   padding: 15px 20px;
   border-radius: 15px;
+  transition: color, ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.visitbtn:hover {
+  border: 2px solid white;
+  color: white;
+  border-radius: 15px;
+  background: rgb(0, 0, 0);
 }
 
 .insta {
